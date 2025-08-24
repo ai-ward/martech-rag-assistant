@@ -1,7 +1,7 @@
 Martech RAG Assistant
 
 🤖 An AI-powered Retrieval-Augmented Generation (RAG) assistant for marketing operations.
-This project indexes official Salesforce, Google Analytics 4, and Google Tag Manager documentation into FAISS, then answers questions with citations through a Gradio web UI.
+This project ingests official Salesforce, Google Analytics 4 (GA4), and Google Tag Manager (GTM) documentation, indexes it with FAISS, and answers natural language questions with citations through a Gradio web UI.
 
 🚀 Features
 
@@ -20,66 +20,62 @@ GPU acceleration (CUDA) with CPU fallback
 Portable setup via Conda or requirements.txt
 
 📂 Project Structure
-
 martech-rag-assistant/
 │
-├── app/ # Core scripts
-│ ├── ingest.py # PDF ingestion and FAISS indexing
-│ ├── server.py # Backend server logic
-│ └── ui.py # Gradio interface
+├── app/                  # Core scripts
+│   ├── ingest.py          # PDF ingestion and FAISS indexing
+│   ├── server.py          # Backend server logic
+│   └── ui.py              # Gradio interface
 │
-├── data/ # Place PDFs here (empty in repo)
-│ └── .gitkeep
+├── data/                 # Place PDFs here (empty in repo)
+│   └── .gitkeep
 │
-├── index/ # FAISS index generated here (ignored in Git)
-│ └── .gitkeep
+├── index/                # FAISS index generated here (ignored in Git)
+│   └── .gitkeep
 │
-├── docs/ # Screenshots for README
-│ └── ui_home.png
+├── docs/                 # Screenshots for README
+│   └── ui_home.png
 │
-├── eval.py # Evaluation script
-├── requirements.txt # Python package list
-├── environment.yml # Optional Conda environment file
-└── README.md # Project documentation
+├── eval.py               # Evaluation script
+├── requirements.txt      # Python dependencies
+├── environment.yml       # Optional Conda environment file
+└── README.md             # Project documentation
 
 ⚙️ Setup
-
-Clone the repository:
+# Clone the repository
 git clone https://github.com/YOUR_USERNAME/martech-rag-assistant.git
-
 cd martech-rag-assistant
 
-Create the Conda environment:
+# Create the Conda environment
 conda create -n martech-rag python=3.11
 conda activate martech-rag
 
-Install dependencies:
+# Install dependencies
 pip install -r requirements.txt
 
-Install PyTorch with CUDA (optional, for GPU acceleration):
-Get the correct command from https://pytorch.org/get-started/locally
+# (Optional) Install PyTorch with CUDA support for GPU
+# Get correct command here: https://pytorch.org/get-started/locally
 
 ▶️ Usage
-1. Ingest PDFs
 
-Put Salesforce, GA4, or GTM PDFs into data/ and run:
+Ingest PDFs
+
+# Place Salesforce, GA4, or GTM PDFs into /data
 python app/ingest.py
 
-This creates the FAISS index in index/.
 
-2. Run the App
+This creates the FAISS index in /index.
 
-Start the Gradio web UI:
+Run the App
+
 python app/ui.py
+
 
 Visit: http://127.0.0.1:7860
 
-3. Evaluate Retrieval
+Evaluate Retrieval
 
-Run offline evaluation with sample queries:
 python eval.py
-
-📊 Example
 
 📝 Notes
 
@@ -89,7 +85,7 @@ index/ is generated automatically and excluded from Git.
 
 Works with both CPU and CUDA-enabled GPUs.
 
-This project is for demonstration purposes (resume/portfolio showcase).
+This project is intended as a resume/portfolio showcase.
 
 💡 Resume Highlights
 
@@ -109,69 +105,49 @@ Marketing teams are flooded with complex documentation.
 This assistant transforms static PDFs into an interactive knowledge base — saving time, reducing errors, and making technical knowledge accessible with AI.
 
 🔑 GitHub Setup Guide
-1. Create Repository
-
-Go to GitHub → New Repo
-
-Name it: martech-rag-assistant
-
-Make it Public
-
-Don’t add a README or gitignore (we’ll push ours)
-
-2. Initialize Git Locally
-
+# Initialize Git locally
 cd %USERPROFILE%\martech-rag-assistant
 git init
 
-3. Add Remote
-
+# Add remote
 git remote add origin https://github.com/YOUR_USERNAME/martech-rag-assistant.git
 
-4. Stage & Commit
-
+# Stage & commit
 git add .
 git commit -m "Initial commit: Martech RAG Assistant"
 
-5. Push
-
+# Push
 git branch -M main
 git push -u origin main
 
 📄 .gitignore
-Python
-
-pycache/
+# Python
+__pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-Virtual environments
-
+# Virtual environments
 .env
 .venv
 *.conda
 *.mamba
 *.egg-info/
 
-FAISS indexes
-
+# FAISS indexes
 index/
 *.index
 *.pkl
 
-Data PDFs (keep local, don’t upload sensitive files)
-
+# Data PDFs (keep local, not shared)
 data/
 !data/.gitkeep
 
-Logs and cache
-
+# Logs and cache
 *.log
 .cache/
 
 📄 requirements.txt
-
 torch
 transformers
 sentence-transformers
@@ -183,10 +159,5 @@ gradio
 uvicorn
 requests
 
-(If you’re using GPU locally, swap faiss-cpu for faiss-gpu.)
 
-
-📈 Why This Project Matters
-
-Marketing teams are flooded with complex documentation.
-This assistant transforms static PDFs into an interactive knowledge base — saving time, reducing errors, and making technical knowledge accessible with AI.
+(If using GPU, swap faiss-cpu for faiss-gpu.)
