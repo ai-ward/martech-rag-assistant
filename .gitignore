@@ -1,0 +1,19 @@
+# Ignore data PDFs
+data/*
+!data/.gitkeep
+
+# Ignore FAISS index files
+index/*
+!index/.gitkeep
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Large binary index files
+*.pkl
+*.index
+
+# Virtual environment folders (if any)
+.env/
+venv/
