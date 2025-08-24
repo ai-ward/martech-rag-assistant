@@ -1,9 +1,9 @@
-Martech RAG Assistant
+#Martech RAG Assistant
 
 🤖 An AI-powered Retrieval-Augmented Generation (RAG) assistant for marketing operations.
 This project ingests official Salesforce, Google Analytics 4 (GA4), and Google Tag Manager (GTM) documentation, indexes it with FAISS, and answers natural language questions with citations through a Gradio web UI.
 
-🚀 Features
+#🚀 Features
 
 Ingest PDFs → split text → embed with SentenceTransformers → vector index with FAISS
 
@@ -19,7 +19,7 @@ GPU acceleration (CUDA) with CPU fallback
 
 Portable setup via Conda or requirements.txt
 
-📂 Project Structure
+#📂 Project Structure
 martech-rag-assistant/
 │
 ├── app/                  # Core scripts
@@ -41,22 +41,22 @@ martech-rag-assistant/
 ├── environment.yml       # Optional Conda environment file
 └── README.md             # Project documentation
 
-⚙️ Setup
-# Clone the repository
+#⚙️ Setup
+## Clone the repository
 git clone https://github.com/YOUR_USERNAME/martech-rag-assistant.git
 cd martech-rag-assistant
 
-# Create the Conda environment
+## Create the Conda environment
 conda create -n martech-rag python=3.11
 conda activate martech-rag
 
-# Install dependencies
+## Install dependencies
 pip install -r requirements.txt
 
-# (Optional) Install PyTorch with CUDA support for GPU
-# Get correct command here: https://pytorch.org/get-started/locally
+## (Optional) Install PyTorch with CUDA support for GPU
+## Get correct command here: https://pytorch.org/get-started/locally
 
-▶️ Usage
+#▶️ Usage
 
 Ingest PDFs
 
@@ -77,7 +77,7 @@ Evaluate Retrieval
 
 python eval.py
 
-📝 Notes
+#📝 Notes
 
 data/ is intentionally empty in this repo — add your own PDFs.
 
@@ -85,69 +85,57 @@ index/ is generated automatically and excluded from Git.
 
 Works with both CPU and CUDA-enabled GPUs.
 
-This project is intended as a resume/portfolio showcase.
+This project is intended as a portfolio showcase.
 
-💡 Resume Highlights
-
-Designed a custom RAG pipeline for marketing technology documentation.
-
-Implemented FAISS + SentenceTransformers to index Salesforce & GA4 content.
-
-Built a Gradio-powered web UI with real-time Q&A and citation-backed responses.
-
-Added an evaluation framework (Recall@k, latency) for retrieval quality.
-
-Enabled CUDA GPU acceleration with CPU fallback for portability.
-
-📈 Why This Project Matters
+#📈 Why This Project Matters
 
 Marketing teams are flooded with complex documentation.
 This assistant transforms static PDFs into an interactive knowledge base — saving time, reducing errors, and making technical knowledge accessible with AI.
 
-🔑 GitHub Setup Guide
-# Initialize Git locally
+#🔑 GitHub Setup Guide
+## Initialize Git locally
 cd %USERPROFILE%\martech-rag-assistant
 git init
 
-# Add remote
+## Add remote
 git remote add origin https://github.com/YOUR_USERNAME/martech-rag-assistant.git
 
-# Stage & commit
+## Stage & commit
 git add .
 git commit -m "Initial commit: Martech RAG Assistant"
 
-# Push
+## Push
 git branch -M main
 git push -u origin main
 
-📄 .gitignore
-# Python
+#📄 .gitignore
+## Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# Virtual environments
+## Virtual environments
 .env
 .venv
 *.conda
 *.mamba
 *.egg-info/
 
-# FAISS indexes
+## FAISS indexes
 index/
 *.index
 *.pkl
 
-# Data PDFs (keep local, not shared)
+## Data PDFs (keep local, not shared)
 data/
 !data/.gitkeep
 
-# Logs and cache
+## Logs and cache
 *.log
 .cache/
 
-📄 requirements.txt
+#📄 requirements.txt
 torch
 transformers
 sentence-transformers
