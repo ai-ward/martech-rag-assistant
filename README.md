@@ -1,6 +1,6 @@
 # Martech RAG Assistant
 🤖 An AI-powered Retrieval-Augmented Generation (RAG) assistant for marketing operations.
-This project indexes official Salesforce, Google Analytics 4, and Google Tag Manager documentation into FAISS, then answers questions with citations through a Gradio web UI.
+This project indexes official Google Ads, Meta Ads, Google Analytics 4, Google Tag Manager, and Salesforce documentation into FAISS, then answers questions with citations through a Gradio web UI.
 # 🚀 Features
 - Ingest PDFs → split text → embed with SentenceTransformers → vector index with FAISS
 - Natural language Q&A over technical docs
