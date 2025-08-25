@@ -59,7 +59,7 @@ python eval.py
 # 📊 Example
 *(Add screenshot here once you capture your UI running)*
 # 📝 Notes
-- `data/` is intentionally empty in this repo — add your own PDFs.
+- `data/` is intentionally empty in this repo - add your own PDFs.
 - `index/` is generated automatically and excluded from Git.
 - Works with both CPU and CUDA-enabled GPUs.
 - This project is for demonstration purposes (portfolio showcase).
@@ -71,7 +71,7 @@ python eval.py
 - Enabled CUDA GPU acceleration with CPU fallback for portability
 # 📈 Why This Project Matters
 Marketing teams are flooded with complex documentation.
-This assistant transforms static PDFs into an interactive knowledge base — saving time, reducing errors, and making technical knowledge accessible with AI.
+This assistant transforms static PDFs into an interactive knowledge base - saving time, reducing errors, and making technical knowledge accessible with AI.
 # 🔑 GitHub Setup Guide
 ```bash
 cd %USERPROFILE%\martech-rag-assistant
