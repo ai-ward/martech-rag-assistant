@@ -56,10 +56,6 @@ Visit: http://127.0.0.1:7860
 ```bash
 python eval.py
 ```
-# 📊 Example
-Here’s the assistant running locally after ingestion:
-![Gradio UI Screenshot](docs/ui.home.png)
-
 
 # 📝 Notes
 - `data/` is intentionally empty in this repo - add your own PDFs.
